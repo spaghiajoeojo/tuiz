@@ -1,0 +1,4 @@
+<div class='sidenav'>
+	<span (click)='newRoom()'>New Quiz</span>
+	<span [class.selected]='roomId === currentRoomId' (click)='loadRoom(roomId)' *ngFor='let roomId of rooms | async'>{{ roomId }}</span>
+</div>

@@ -1,0 +1,12 @@
+<div class="row">
+    <div *ngFor="let player of room.players" class="col card player">
+        <div class="card-body">
+            <div class="row text-center">
+                <h5 class="col">{{player.name}}</h5>
+            </div>
+            <div class="row text-center">
+                <h2 class="col">{{player.score}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "tuiz-server",
+  "version": "1.0.0",
+  "description": "a socket.io server",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "Lorenzo Beccaro",
+  "license": "MIT",
+  "dependencies": {
+    "@types/socket.io": "^2.1.4",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
