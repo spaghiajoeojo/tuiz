@@ -6,7 +6,6 @@ import { startWith } from 'rxjs/operators';
 
 
 import * as QRCode from 'easyqrcodejs';
-import { Player } from '../models/player';
 
 @Component({
   selector: 'app-shared-display',
@@ -18,7 +17,7 @@ export class SharedDisplayComponent implements OnInit {
   @ViewChild('qrcode', { static: false }) qrcodeEl: ElementRef;
 
   qrcodeDrawed: boolean = false;
-  room: Room = { id:'', room:'', players: []};
+  room: Room = { id: '', question: {}, players: [] };
   linkToRoom: string;
   private _roomSub: Subscription;
   constructor(private roomService: RoomService) { }
@@ -46,6 +45,10 @@ export class SharedDisplayComponent implements OnInit {
 
   editRoom() {
     this.roomService.editRoom(this.room);
+  }
+
+  nextQuestion() {
+    this.roomService.nextQuestion(this.room.id);
   }
 
   openTab() {

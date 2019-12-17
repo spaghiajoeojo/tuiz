@@ -10,6 +10,7 @@ import { RoomComponent } from './room/room.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { SharedDisplayComponent } from './shared-display/shared-display.component';
 import { PlayerListComponent } from './player-list/player-list.component';
+import { QuestionComponent } from './question/question.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:7400', options: {} };
 
@@ -20,6 +21,7 @@ const config: SocketIoConfig = { url: 'http://localhost:7400', options: {} };
     RoomComponent,
     SharedDisplayComponent,
     PlayerListComponent,
+    QuestionComponent,
   ],
   imports: [
     BrowserModule,

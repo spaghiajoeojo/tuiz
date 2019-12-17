@@ -1,0 +1,23 @@
+{
+    "type": "dixit",
+    "phases": ["insert","answer","score"],
+    "score": {
+        "right": {
+            "score": "100/winners",
+            "to": "winners",
+            "from": "none" 
+        },
+        "wrong": {
+            "score": "20",
+            "to": "owner",
+            "from": "losers" 
+        }
+    },
+    "data": [
+        {
+            "text": "Un tempo, la maggior parte delle carote era ___",
+            "answers": ["viola"],
+            "explanation": "Fu nel 17esimo secolo che i coltivatori olandesi scelsero di selezionare e favorire le carote arancioni, per omaggiare uno dei colori della loro bandiera dell'epoca"
+        }
+    ]
+}

@@ -14,7 +14,7 @@ import { Player } from '../models/player';
 export class RoomComponent implements OnInit {
 
   player: Player;
-  room: Room = { id:'', room:'', players: []};
+  room: Room = { id: '', question: {}, players: [] };
   private _roomSub: Subscription;
   constructor(private route: ActivatedRoute, private roomService: RoomService) { }
 
@@ -36,7 +36,10 @@ export class RoomComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('idRoom');
     console.log(this.room);
     this.player.score = 0;
-    this.roomService.registerPlayer(id, this.player);
+    this.roomService.registerPlayer(id, this.player).then(player => {
+      this.player = player
+      console.log(this.player);
+    });
   }
 
   editRoom() {

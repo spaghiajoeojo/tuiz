@@ -27,6 +27,11 @@ export class RoomService {
 
   registerPlayer(roomId: string, player: Player) {
     this.socket.emit('registerPlayer', { roomId: roomId, player: player });
+    return this.socket.fromOneTimeEvent<Player>('playerRegistered');
+  }
+
+  nextQuestion(roomId: string) {
+    this.socket.emit('nextQuestion', roomId);
   }
 
   private roomId() {
